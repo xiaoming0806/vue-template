@@ -1,0 +1,13 @@
+@charset "utf-8";
+#index-warp{
+  background: url('./../../assets/images/logo.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.fade-enter-active, .fade-leave-actice{
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to{
+  opacity: 0;
+}
