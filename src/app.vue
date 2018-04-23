@@ -2,8 +2,8 @@
   <div id="add">
     <img src="./assets/images/logo.png">
     <p>这是一个vuex测试: {{ counter }}</p>
-    <router-link to="/index/123">index</router-link>
-    <router-link to="/login">login</router-link>
+    <router-link :to="{ name: 'index', params: { id: 123 }}">index</router-link>
+    <router-link :to="{ name: 'login' }">login</router-link>
     <transition name="fade">
       <router-view />
     </transition>

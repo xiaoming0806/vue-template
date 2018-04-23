@@ -1,5 +1,9 @@
 export default [
   {
+    path: '*',
+    component: () => import('../views/error/404.vue')
+  },
+  {
     path: '/',
     redirect: '/index'
   },
@@ -10,14 +14,11 @@ export default [
     meta: {
       title: 'this is index',
       description: 'asdasd'
-    },
-    beforeEnter (to, from, next) {
-      console.log('111111111')
-      next()
     }
   },
   {
     path: '/login',
+    name: 'login',
     component: () => import('../views/login/login.vue')
   }
 ]

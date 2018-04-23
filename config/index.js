@@ -13,18 +13,18 @@ module.exports = {
     assetsPublicPath: '/',
     // 下面是代理表，作用是用来，建一个虚拟api服务器用来代理本机的请求，只能用于开发模式
     proxyTable: {
-      // '/': {
-      //   // target: 'http://172.16.100.40:8080',
-      //   target: 'http://192.168.1.116:8081',
-      //   changeOrigin: true,
-      //   pathRewrite: { '^/': '' }
-      // }
+      '/api': {
+        target: 'http://192.168.1.122:8888',
+        // target: 'http://172.16.100.65:8888',
+        changeOrigin: true,
+        pathRewrite: { '^/api': '' }
+      }
     },
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
+    host: '172.16.100.156', // can be overwritten by process.env.HOST
     // 下面是dev-server的端口号，可以自行更改
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 8989, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     // 下面表示是否自定代开浏览器
     autoOpenBrowser: false,
     errorOverlay: true,
@@ -66,7 +66,7 @@ module.exports = {
     // 下面定义的是静态资源根目录的子目录static，也就是dist目录下面的static
     assetsSubDirectory: 'static',
     // 下面定义的是静态资源的公开路径，也就是真正的引用路径
-    assetsPublicPath: './',
+    assetsPublicPath: '/',
 
     /**
      * Source Maps
