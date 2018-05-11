@@ -46,12 +46,13 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'jquery': resolve('/node_modules/jquery/src/jquery.js')
     }
   },
   // 配置不同类型模块的处理规则
   module: {
     rules: [
-      ...(config.dev.useEslint ? [createLintingRule()] : []),
+      // ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
         test: /\.vue$/, // vue文件后缀
         loader: 'vue-loader', //使用vue-loader处理

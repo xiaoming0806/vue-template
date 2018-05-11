@@ -13,11 +13,11 @@ module.exports = {
     assetsPublicPath: '/',
     // 下面是代理表，作用是用来，建一个虚拟api服务器用来代理本机的请求，只能用于开发模式
     proxyTable: {
-      '/api': {
-        target: 'http://192.168.1.122:8888',
-        // target: 'http://172.16.100.65:8888',
+      '/dataplatform': {
+        // target: 'http://192.168.1.122:8888',
+        target: 'http://172.16.100.49:8888',
         changeOrigin: true,
-        pathRewrite: { '^/api': '' }
+        pathRewrite: { '^/dataplatform': '/dataplatform' }
       }
     },
 

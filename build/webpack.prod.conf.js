@@ -40,6 +40,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
+    new webpack.ProvidePlugin({
+        $ : "jquery",
+        jQuery: "jquery",
+    }),
     // 丑化压缩JS代码
     new UglifyJsPlugin({
       uglifyOptions: {
